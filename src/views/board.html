@@ -1,0 +1,43 @@
+<div class="board-container">
+    <!-- SVG Container for Grid -->
+    <svg viewBox="0 0 600 550" class="board-svg">
+        <defs>
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+        
+        <!-- Hexes are injected here -->
+        {{ @rows }}
+    </svg>
+
+    <!-- Player 1 Indicator (Left) -->
+    <div class="player-panel player-panel--p1"
+         :class="$store.game.turn === 'p1' ? 'active' : 'inactive'">
+        <div class="player-avatar p1-color"></div>
+        <span class="player-name p1-color-text">HRÁČ 1</span>
+        <span x-text="$store.game.scores.p1" class="player-score">0</span>
+    </div>
+
+    <!-- Player 2 Indicator (Right) -->
+    <div class="player-panel player-panel--p2"
+         :class="$store.game.turn === 'p2' ? 'active' : 'inactive'">
+        <div class="player-avatar p2-color"></div>
+        <span class="player-name p2-color-text">HRÁČ 2</span>
+        <span x-text="$store.game.scores.p2" class="player-score">0</span>
+    </div>
+    
+    <!-- Turn Status -->
+    <div class="turn-indicator">
+        <span class="turn-label">Na tahu</span>
+        <span class="turn-value pulse" 
+              :class="$store.game.turn === 'p1' ? 'p1-text' : 'p2-text'"
+              :style="$store.game.turn === 'p1' ? 'color: var(--color-gold)' : 'color: var(--color-blue)'"
+              x-text="$store.game.turn === 'p1' ? 'HRÁČ 1' : 'HRÁČ 2'">
+        </span>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<g 
+    class="hex-group"
+    transform="translate({{ x }}, {{ y }})"
+    @click="$store.game.handleHexClick({{ id }})"
+    x-data
+>
+    <!-- Hexagon Shape -->
+    <polygon 
+        points="30,0 60,17.32 60,51.96 30,69.28 0,51.96 0,17.32" 
+        class="hex-path"
+        :class="{
+            'hex-neutral': !$store.game.fields[{{ id }}] || $store.game.fields[{{ id }}].status === 'neutral',
+            'hex-p1': $store.game.fields[{{ id }}]?.status === 'p1',
+            'hex-p2': $store.game.fields[{{ id }}]?.status === 'p2',
+            'hex-black': $store.game.fields[{{ id }}]?.status === 'black',
+            'hex-win': $store.game.winningPath.includes({{ id }})
+        }"
+    />
+    
+    <!-- Text -->
+    <text 
+        x="30" 
+        y="42" 
+        text-anchor="middle" 
+        class="hex-text"
+    >
+        {{ letter }}
+    </text>
+</g>

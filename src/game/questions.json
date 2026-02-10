@@ -1,0 +1,245 @@
+[
+  {
+    "id": 1,
+    "letter": "A",
+    "question": "Jak se jmenuje hlavní město Řecka?",
+    "answer": "Atény",
+    "category": "Zeměpis"
+  },
+  {
+    "id": 2,
+    "letter": "A",
+    "question": "Který prvek má chemickou značku Ag?",
+    "answer": "Stříbro",
+    "category": "Chemie"
+  },
+  {
+    "id": 3,
+    "letter": "B",
+    "question": "Jak se jmenuje hlavní město Slovenska?",
+    "answer": "Bratislava",
+    "category": "Zeměpis"
+  },
+  {
+    "id": 4,
+    "letter": "B",
+    "question": "Jaká je měna v Thajsku?",
+    "answer": "Baht",
+    "category": "Ekonomie"
+  },
+  {
+    "id": 5,
+    "letter": "C",
+    "question": "Jak se jmenuje nejznámější český cestovatel (spolu s Hanzelkou)?",
+    "answer": "Zikmund",
+    "category": "Historie"
+  },
+  {
+    "id": 6,
+    "letter": "Č",
+    "question": "Která řeka protéká Prahou?",
+    "answer": "Vltava",
+    "category": "Zeměpis"
+  },
+  {
+    "id": 7,
+    "letter": "D",
+    "question": "Jak se jmenuje dánské hlavní město?",
+    "answer": "Kodaň",
+    "category": "Zeměpis"
+  },
+  {
+    "id": 8,
+    "letter": "E",
+    "question": "Jak se jmenuje nejvyšší hora světa?",
+    "answer": "Mount Everest",
+    "category": "Zeměpis"
+  },
+  {
+    "id": 9,
+    "letter": "F",
+    "question": "Jak se jmenuje zakladatel psychoanalýzy?",
+    "answer": "Freud",
+    "category": "Psychologie"
+  },
+  {
+    "id": 10,
+    "letter": "G",
+    "question": "Jak se jmenuje hlavní město Grónska (Nuuk, ale začíná na G v dánštině - Godthåb)? Ne, dáme radši: Jak se jmenuje fyzikální jednotka hmotnosti?",
+    "answer": "Gram",
+    "category": "Fyzika"
+  },
+  {
+      "id": 11,
+      "letter": "H",
+      "question": "Který hudební skladatel složil Novosvětskou symfonii?",
+      "answer": "Dvořák",
+      "category": "Hudba"
+  },
+  {
+      "id": 12,
+      "letter": "CH",
+      "question": "Jak se jmenuje chemický prvek se značkou Cl?",
+      "answer": "Chlor",
+      "category": "Chemie"
+  },
+  {
+      "id": 13,
+      "letter": "I",
+      "question": "Který stát leží na Apeninském poloostrově?",
+      "answer": "Itálie",
+      "category": "Zeměpis"
+  },
+  {
+      "id": 14,
+      "letter": "J",
+      "question": "Jak se jmenuje ovoce, které je symbolem firmy Apple?",
+      "answer": "Jablko",
+      "category": "Rostliny"
+  },
+  {
+      "id": 15,
+      "letter": "K",
+      "question": "Jak se jmenuje hlavní město Ukrajiny?",
+      "answer": "Kyjev",
+      "category": "Zeměpis"
+  },
+  {
+      "id": 16,
+      "letter": "L",
+      "question": "Jak se jmenuje hlavní město Velké Británie?",
+      "answer": "Londýn",
+      "category": "Zeměpis"
+  },
+  {
+      "id": 17,
+      "letter": "M",
+      "question": "Jak se jmenuje planeta, která je čtvrtá v pořadí od Slunce?",
+      "answer": "Mars",
+      "category": "Vesmír"
+  },
+  {
+      "id": 18,
+      "letter": "N",
+      "question": "Jak se jmenuje hlavní město Norska?",
+      "answer": "Oslo",
+      "category": "Zeměpis"
+  },
+   {
+      "id": 19,
+      "letter": "O",
+      "question": "Jak se jmenuje pták, který je symbolem moudrosti?",
+      "answer": "Sova",
+      "category": "Biologie"
+  },
+  {
+      "id": 20,
+      "letter": "P",
+      "question": "Jak se jmenuje hlavní město České republiky?",
+      "answer": "Praha",
+      "category": "Zeměpis"
+  },
+  {
+      "id": 21,
+      "letter": "R",
+      "question": "Jak se jmenuje město, kde se konal filmový festival (Karlovy Vary)?",
+      "answer": "Vary",
+      "category": "Kultura"
+  },
+  {
+      "id": 22,
+      "letter": "Ř",
+      "question": "Jak se jmenuje řeka, která protéká Římem?",
+      "answer": "Tibera",
+      "category": "Zeměpis"
+  },
+  {
+      "id": 23,
+      "letter": "S",
+      "question": "Jak se jmenuje naše nejbližší hvězda?",
+      "answer": "Slunce",
+      "category": "Vesmír"
+  },
+  {
+      "id": 24,
+      "letter": "Š",
+      "question": "Jak se jmenuje španělské hlavní město?",
+      "answer": "Madrid",
+      "category": "Zeměpis"
+  },
+  {
+      "id": 25,
+      "letter": "T",
+      "question": "Jak se jmenuje  hlavní město Japonska?",
+      "answer": "Tokio",
+      "category": "Zeměpis"
+  },
+  {
+      "id": 26,
+      "letter": "U",
+      "question": "Jak se jmenuje planeta, která je sedmá v pořadí od Slunce?",
+      "answer": "Uran",
+      "category": "Vesmír"
+  },
+  {
+      "id": 27,
+      "letter": "V",
+      "question": "Jak se jmenuje hlavní město Rakouska?",
+      "answer": "Vídeň",
+      "category": "Zeměpis"
+  },
+  {
+      "id": 28,
+      "letter": "Z",
+      "question": "Jak se jmenuje zvíře, které má pruhy?",
+      "answer": "Zebra",
+      "category": "Biologie"
+  },
+  {
+      "id": 29,
+      "letter": "Ž",
+      "question": "Jak se jmenuje živočich, který má krunýř?",
+      "answer": "Želva",
+      "category": "Biologie"
+  },
+  {
+      "id": 1001,
+      "letter": "?",
+      "question": "Je Praha hlavní město ČR?",
+      "answer": "ano",
+      "type": "boolean",
+      "category": "Obecné"
+  },
+  {
+      "id": 1002,
+      "letter": "?",
+      "question": "Leží Brno na Labi?",
+      "answer": "ne",
+      "type": "boolean",
+      "category": "Obecné"
+  },
+  {
+      "id": 1003,
+      "letter": "?",
+      "question": "Má pavouk 8 nohou?",
+      "answer": "ano",
+      "type": "boolean",
+      "category": "Biologie"
+  },
+  {
+      "id": 1004,
+      "letter": "?",
+      "question": "Je voda sloučenina vodíku a dusíku?",
+      "answer": "ne",
+      "type": "boolean",
+      "category": "Chemie"
+  },
+  {
+      "id": 1005,
+      "letter": "?",
+      "question": "Je Mount Everest nejvyšší hora Evropy?",
+      "answer": "ne",
+      "type": "boolean",
+      "category": "Zeměpis"
+  }
+]

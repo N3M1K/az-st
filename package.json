@@ -2,13 +2,17 @@
   "name": "az_kviz",
   "version": "1.0.50",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/html": "^1.4.0",
+    "alpinejs": "^3.15.8",
+    "bun-html-lite": "^1.0.0",
+    "elysia": "^1.4.23",
+    "htmx.org": "^2.0.8"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
     "bun-types": "latest"
   },
   "module": "src/index.js"

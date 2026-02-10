@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZ Kvíz Pro - Broadcast Edition</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <link href="/public/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="bg-ambient">
+        <div class="bg-orb bg-orb--blue"></div>
+        <div class="bg-orb bg-orb--gold"></div>
+        <div class="bg-noise"></div>
+    </div>
+
+    <!-- Main Game Container -->
+    <main class="app-container">
+        {{ @content }}
+    </main>
+
+    <!-- Modal Portal -->
+    <div id="modal-root">
+        {{ @modal }}
+    </div>
+
+    <script>
+        {{ @script }}
+    </script>
+</body>
+</html>

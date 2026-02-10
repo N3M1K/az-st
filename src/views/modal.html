@@ -1,0 +1,122 @@
+<div 
+    x-show="$store.game.modalOpen"
+    class="modal-overlay hidden"
+    :class="{ 'hidden': !$store.game.modalOpen }"
+    x-transition:enter="transition-base"
+    x-transition:enter-start="backdrop-start"
+    x-transition:enter-end="backdrop-end"
+    x-transition:leave="transition-base"
+    x-transition:leave-start="backdrop-end"
+    x-transition:leave-end="backdrop-start"
+    style="display: none;"
+    @keydown.window.escape="$store.game.closeModal()"
+>
+    <!-- Card Container -->
+    <div 
+        class="modal-card"
+        @click.outside="$store.game.closeModal()"
+        x-show="$store.game.modalOpen"
+        x-transition:enter="transition-base"
+        x-transition:enter-start="modal-enter-start"
+        x-transition:enter-end="modal-enter-end"
+        x-transition:leave="transition-base"
+        x-transition:leave-start="modal-leave-start"
+        x-transition:leave-end="modal-leave-end"
+    >
+        <!-- Header -->
+        <div class="modal-header">
+            <h3 class="modal-title">
+                Otázka <span x-text="$store.game.currentHexId"></span>
+            </h3>
+            <button @click="$store.game.closeModal()" class="modal-close">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+            </button>
+        </div>
+
+        <!-- Question Body -->
+        <div class="mb-lg">
+            <p x-text="$store.game.currentQuestion?.text" class="question-text"></p>
+        </div>
+
+        <!-- Timer Bar -->
+        <div class="timer-bar">
+            <div class="timer-progress" 
+                 :style="$store.game.modalOpen ? 'transform: scaleX(0)' : 'transform: scaleX(1)'"></div>
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-section" x-show="!$store.game.answered" x-data="{ userInput: '' }">
+            <input 
+                type="text" 
+                x-model="userInput" 
+                @keyup.enter="$store.game.verifyAnswer(userInput); userInput = ''"
+                placeholder="Zadejte odpověď..."
+                class="modal-input"
+                autofocus
+            >
+            <button 
+                @click="$store.game.verifyAnswer(userInput); userInput = ''"
+                class="btn btn--primary w-full mt-4"
+            >
+                Potvrdit
+            </button>
+        </div>
+
+        <!-- Feedback Animation -->
+         <div x-show="$store.game.answered" class="feedback-box">
+            <div x-show="$store.game.lastAnswerCorrect">
+                <svg class="feedback-icon text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div class="feedback-text text-success">SPRÁVNÁ ODPOVĚĎ</div>
+            </div>
+            <div x-show="!$store.game.lastAnswerCorrect">
+                 <svg class="feedback-icon text-danger" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                 <div class="feedback-text text-danger">ŠPATNÁ ODPOVĚĎ</div>
+                 <div class="mt-4 text-white/70">
+                    Správně bylo: <span x-text="$store.game.currentQuestion.answer[0]" class="font-bold text-white"></span>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Victory Modal -->
+    <div 
+        x-show="$store.game.victory"
+        x-transition:enter="transition-base"
+        x-transition:enter-start="backdrop-start"
+        x-transition:enter-end="backdrop-end"
+        class="modal-overlay hidden"
+        :class="{ 'hidden': !$store.game.victory }"
+        style="display: none;"
+    >
+        <div 
+            class="modal-card victory-card"
+            :class="$store.game.winner === 'p1' ? 'victory-p1' : 'victory-p2'"
+            x-show="$store.game.victory"
+            x-transition:enter="transition-base duration-700"
+            x-transition:enter-start="victory-enter-start"
+            x-transition:enter-end="victory-enter-end"
+        >
+            <div class="victory-content">
+                <div style="font-size: 5rem; margin-bottom: 20px;">🏆</div>
+
+                <h2 class="victory-title">VÍTĚZSTVÍ</h2>
+                
+                <h3 class="victory-winner">
+                    <span x-text="$store.game.winner === 'p1' ? 'HRÁČ 1' : 'HRÁČ 2'" 
+                          :style="$store.game.winner === 'p1' ? 'color: var(--color-gold)' : 'color: var(--color-blue)'"></span>
+                </h3>
+
+                <button 
+                    @click="$store.game.resetGame()"
+                    class="btn btn--primary"
+                >
+                    Nová Hra
+                </button>
+            </div>
+        </div>
+    </div>
