@@ -11,28 +11,18 @@ export class HexMap {
 
     private generateMap() {
         let id = 0;
-        const letters = "AÁBCČDĎEÉFGHCHIÍJKLMNŇOÓPQRŘSŠTŤUÚVWXYÝZŽ".split("");
-        // Standard AZ Kviz letters might be different, but let's just fill them sequentially or randomly.
-        // Actually, let's use the ones from questions.json if possible, or just generic letters for now.
-        // The user requirement says: "Logika musí umět náhodně vybírat otázky pro dané písmeno na hexagonu."
-        // We will assign a random letter to each hex, or a fixed set.
-        // Let's use a fixed set of 28 distinct letters for the grid to look nice, or just random.
-        // Let's use a shuffled subset of alphabet.
-        
-        const availableLetters = [...letters]; 
-        // We need 28.
         
         for (let r = 0; r < this.rows; r++) {
             for (let q = 0; q <= r; q++) {
-                // Determine letter (just distinct ones for now or repeating if we run out)
-                const letterIndex = id % availableLetters.length;
+                // Assign numbers 1 to 28 sequentially
+                const letter = (id + 1).toString();
                 
                 this.hexes.push({
                     id: id,
                     q: q, // col
                     r: r, // row
                     state: 'default',
-                    letter: availableLetters[letterIndex] || '?'
+                    letter: letter
                 });
                 id++;
             }
